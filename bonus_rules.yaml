@@ -1,6 +1,6 @@
 base_rules:
   - name: base_rate
-    type: divider
+    type: divisor
     condition: always
     rate: 10  # 1 бонус за каждые $10
 
