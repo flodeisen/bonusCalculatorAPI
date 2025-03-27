@@ -26,21 +26,24 @@ pip install -r requirements.txt
 ```yaml
 base_rules:
   - name: base_rate
-    type: multiplier
+    type: divisor
     condition: always
-    rate: 0.1  # 1 бонус за каждые $10
+    rate: 10  # 1 бонус за каждые $10
+    priority: 1
 
 holiday_rules:
   - name: holiday_bonus
     type: multiplier
     condition: is_holiday
     rate: 2.0  # x2 бонусов в выходные/праздники
+    priority: 2
 
 status_rules:
   - name: vip_boost
     type: percentage_increase
     condition: is_vip
     rate: 0.4  # +40% для VIP-клиентов
+    priority: 3
 ```
 
 ## Запуск сервиса
