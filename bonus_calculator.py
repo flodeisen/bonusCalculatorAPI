@@ -13,7 +13,7 @@ class BonusCalculator:
         total_bonus = 0
 
         # Базовое правило: 1 бонус за каждые $10
-        base_bonus = amount * self.rules['base_rules'][0]['rate']
+        base_bonus = amount // self.rules['base_rules'][0]['rate']
         total_bonus = base_bonus
         applied_rules.append({
             'rule': self.rules['base_rules'][0]['name'],
