@@ -1,8 +1,8 @@
 base_rules:
   - name: base_rate
-    type: multiplier
+    type: divider
     condition: always
-    rate: 0.1  # 1 бонус за каждые $10
+    rate: 10  # 1 бонус за каждые $10
 
 holiday_rules:
   - name: holiday_bonus
