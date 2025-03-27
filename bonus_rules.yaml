@@ -1,0 +1,17 @@
+base_rules:
+  - name: base_rate
+    type: multiplier
+    condition: always
+    rate: 0.1  # 1 бонус за каждые $10
+
+holiday_rules:
+  - name: holiday_bonus
+    type: multiplier
+    condition: is_holiday
+    rate: 2.0  # x2 бонусов в выходные/праздники
+
+status_rules:
+  - name: vip_boost
+    type: percentage_increase
+    condition: is_vip
+    rate: 0.4  # +40% для VIP-клиентов
